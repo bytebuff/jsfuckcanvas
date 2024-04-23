@@ -1,4 +1,4 @@
-# node-canvas
+# jsfuckcanvas
 
 ![Test](https://github.com/Automattic/node-canvas/workflows/Test/badge.svg)
 [![NPM version](https://badge.fury.io/js/canvas.svg)](http://badge.fury.io/js/canvas)
