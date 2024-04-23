@@ -1,5 +1,5 @@
 {
-  "name": "canvas",
+  "name": "jsfuckcanvas",
   "description": "Canvas graphics API backed by Cairo",
   "version": "2.11.2",
   "author": "TJ Holowaychuk <tj@learnboost.com>",
@@ -8,7 +8,8 @@
   "contributors": [
     "Nathan Rajlich <nathan@tootallnate.net>",
     "Rod Vagg <r@va.gg>",
-    "Juriy Zaytsev <kangax@gmail.com>"
+    "Juriy Zaytsev <kangax@gmail.com>",
+    "scrapy@qq.com"
   ],
   "keywords": [
     "canvas",
@@ -20,8 +21,8 @@
     "images",
     "pdf"
   ],
-  "homepage": "https://github.com/Automattic/node-canvas",
-  "repository": "git://github.com/Automattic/node-canvas.git",
+  "homepage": "https://github.com/bytebuff/jsfuckcanvas",
+  "repository": "git://github.com/bytebuff/jsfuckcanvas.git",
   "scripts": {
     "prebenchmark": "node-gyp build",
     "benchmark": "node benchmarks/run.js",
