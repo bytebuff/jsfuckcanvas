@@ -1,14 +1,14 @@
-# node-canvas
+# jsfuckcanvas
 
 ![Test](https://github.com/Automattic/node-canvas/workflows/Test/badge.svg)
 [![NPM version](https://badge.fury.io/js/canvas.svg)](http://badge.fury.io/js/canvas)
 
-node-canvas is a [Cairo](http://cairographics.org/)-backed Canvas implementation for [Node.js](http://nodejs.org).
+jsfuckcanvas is a [Cairo](http://cairographics.org/)-backed Canvas implementation for [Node.js](http://nodejs.org).
 
 ## Installation
 
 ```bash
-$ npm install canvas
+$ npm install jsfuckcanvas
 ```
 
 By default, binaries for macOS, Linux and Windows will be downloaded. If you want to build from source, use `npm install --build-from-source` and see the **Compiling** section below.
@@ -37,7 +37,7 @@ If you have xcode 10.0 or higher installed, in order to build from source you ne
 ## Quick Example
 
 ```javascript
-const { createCanvas, loadImage } = require('canvas')
+const { createCanvas, loadImage } = require('jsfuckcanvas')
 const canvas = createCanvas(200, 200)
 const ctx = canvas.getContext('2d')
 
@@ -103,7 +103,7 @@ This project is an implementation of the Web Canvas API and implements that API 
 Creates a Canvas instance. This method works in both Node.js and Web browsers, where there is no Canvas constructor. (See `browser.js` for the implementation that runs in browsers.)
 
 ```js
-const { createCanvas } = require('canvas')
+const { createCanvas } = require('jsfuckcanvas')
 const mycanvas = createCanvas(200, 200)
 const myPDFcanvas = createCanvas(600, 800, 'pdf') // see "PDF Support" section
 ```
@@ -120,7 +120,7 @@ const myPDFcanvas = createCanvas(600, 800, 'pdf') // see "PDF Support" section
 Creates an ImageData instance. This method works in both Node.js and Web browsers.
 
 ```js
-const { createImageData } = require('canvas')
+const { createImageData } = require('jsfuckcanvas')
 const width = 20, height = 20
 const arraySize = width * height * 4
 const mydata = createImageData(new Uint8ClampedArray(arraySize), width)
@@ -135,7 +135,7 @@ const mydata = createImageData(new Uint8ClampedArray(arraySize), width)
 Convenience method for loading images. This method works in both Node.js and Web browsers.
 
 ```js
-const { loadImage } = require('canvas')
+const { loadImage } = require('jsfuckcanvas')
 const myimg = loadImage('http://server.com/image.png')
 
 myimg.then(() => {
@@ -158,7 +158,7 @@ const myimg = await loadImage('http://server.com/image.png')
 To use a font file that is not installed as a system font, use `registerFont()` to register the font with Canvas. *This must be done before the Canvas is created.*
 
 ```js
-const { registerFont, createCanvas } = require('canvas')
+const { registerFont, createCanvas } = require('jsfuckcanvas')
 registerFont('comicsans.ttf', { family: 'Comic Sans' })
 
 const canvas = createCanvas(500, 500)
@@ -179,7 +179,7 @@ The second argument is an object with properties that resemble the CSS propertie
 As in browsers, `img.src` can be set to a `data:` URI or a remote URL. In addition, node-canvas allows setting `src` to a local file path or `Buffer` instance.
 
 ```javascript
-const { Image } = require('canvas')
+const { Image } = require('jsfuckcanvas')
 
 // From a buffer:
 fs.readFile('images/squid.png', (err, squid) => {
@@ -218,7 +218,7 @@ Applies to JPEG images drawn to PDF canvases only.
 Setting `img.dataMode = Image.MODE_MIME` or `Image.MODE_MIME|Image.MODE_IMAGE` enables MIME data tracking of images. When MIME data is tracked, PDF canvases can embed JPEGs directly into the output, rather than re-encoding into PNG. This can drastically reduce filesize and speed up rendering.
 
 ```javascript
-const { Image, createCanvas } = require('canvas')
+const { Image, createCanvas } = require('jsfuckcanvas')
 const canvas = createCanvas(w, h, 'pdf')
 const img = new Image()
 img.dataMode = Image.MODE_IMAGE // Only image data tracked
